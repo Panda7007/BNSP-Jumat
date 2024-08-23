@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-
 Route::get("/", [HomeController::class, "home"]);
 Route::get("/admin", [HomeController::class, "admin"]);
 
@@ -23,5 +22,9 @@ Route::post('/event/tambah', [EventController::class, "store"]);
 Route::get('/pendaftar/edit/{id}',[PendaftaranController::class,'edit']); //menampilkan edit event
 Route::post('/pendaftar/update',[PendaftaranController::class,'pendaftarupdate']);
 Route::get('/pendaftar/hapus/{id}',[PendaftaranController::class,'hapus']); //untuk menghapus program
-Route::get('/pendaftar/tambah', [PendaftaranController::class, "tambahpendaftar"]);
 Route::post('/pendaftar/tambah', [PendaftaranController::class, "store"]);
+
+//login
+Route::get('/login', [HomeController::class,'login'])->name('login');
+Route::post('/loginaksi', [HomeController::class,'loginaksi'])->name('loginaksi');
+Route::get('/logoutaksi', [HomeController::class,'logoutaksi'])->name('logoutaksi');

@@ -26,10 +26,12 @@ class PendaftaranController extends Controller
       {
           DB::table('pendaftaran')->insert([
               'nama' => $request->nama,
-              'tanggal' => $request->tanggal,
-              'informasi' => $request->informasi
+              'email' => $request->email,
+              'ttl' => $request->tanggal,
+              'alamat' => $request->alamat,
+              'eventapa' => $request->event
           ]);
-          return redirect('/admin');
+          return redirect('/');
       }
   
       public function edit($id)
@@ -51,6 +53,6 @@ class PendaftaranController extends Controller
               'eventapa' => $request->event
           ]);
           // alihkan halaman ke halaman pegawai
-          return redirect('/admin');
+          return redirect('/');
       }
 }

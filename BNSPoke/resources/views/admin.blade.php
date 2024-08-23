@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1>Selamat Datang Admin!</h1>
+        <a href="/logoutaksi" class="btn btn-primary mb-4 text-left">Keluar</a>
 
         <a href="/event/tambah" class="btn btn-primary mb-4">+ Tambah Event</a>
         <table class="table table-bordered table-striped">
